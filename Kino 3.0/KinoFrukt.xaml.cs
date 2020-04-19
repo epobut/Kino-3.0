@@ -47,14 +47,6 @@ namespace Kino_3._0
         {
             InitializeComponent();
             
-            //string key = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings";
-            //string serverName = "195.9.237.66";//your proxy server name;
-            //string port = "8080"; //your proxy port;
-            //string proxy = serverName + ":" + port;
-
-            //RegistryKey RegKey = Registry.CurrentUser.OpenSubKey(key, true);
-            //RegKey.SetValue("ProxyServer", proxy);
-            //RegKey.SetValue("ProxyEnable", 1);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -67,56 +59,20 @@ namespace Kino_3._0
 
             url = tbUrlKF.Text;
 
-            //string GetHtml()
-            //{
-            //    using (var client = new WebClient())
-            //    {
-
-            //        client.Headers.Add("Host", "www.kinopoisk.ru:443");
-            //        client.Headers.Add("Accept", "text / html, application / xhtml + xml, application / xml; q = 0.9,image / webp,image / apng,*/*;q=0.8");
-            //        client.Headers.Add("Accept-Encoding", "gzip, deflate, br");
-            //        client.Headers.Add("Accept-Language", "en-US,en;q=0.9,uk;q=0.8,ru;q=0.7");
-            //        client.Headers.Add("Cookie", "PHPSESSID=acves29a8mep728e8usca6mpd6; yandex_gid=143; desktop_session_key=2aa1ff6214bd69f49034817443ba339d549e81b0ec0df6b651a1ad63525285b7ef46c47688421a6e9cdba252f184feb2873991729962cc29f3a6e497db4206c7da8b74c32666eae10c14df3b2b455a51; desktop_session_key.sig=wr4KOKP6CZWaSd4Bzhysufn9R3g; yandexuid=7839672051513866813; my_perpages=%5B%5D; _ym_uid=1518637208818912632; Session_id=3%3A1520689404.5.0.1520689404790%3AsVWOWw%3A11C.1%7C1110000014810420.-1.0%7C30%3A170284.99.JRTf0qI9vm_puxjBreNHI8VGN-8; uid=14810420; mykp_button=edit_main; tc=49; mobile=no; noflash=true; refresh_yandexuid=7839672051513866813; _ym_isad=1; loc2=win; user_country=ua; _ym_visorc_22663942=b");
-            //        client.Headers.Add("Upgrade-Insecure-Requests", "1");
-            //        client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36");
-            //        client.Headers.Add("X-Compress", "null");
-            //        client.Headers.Add("Referer", url);
-
-            //        return (client.DownloadString(url));
-            //    }
-            //}
-            //string html = GetHtml();
-
+            
 
             WebClient webClient = new BetterWebClient();
             
 
             if (tbUrlKF.Text.Contains(siteKinopoisk))
             {
-                //try
-                //{
-                //webClient.Headers.Add("Host", "www.kinopoisk.ru:443");
+
                 webClient.Headers.Add("Accept", "text / html, application / xhtml + xml, application / xml; q = 0.9,image / webp,image / apng,*/*;q=0.8");
                 webClient.Headers.Add("Accept-Encoding", "gzip, deflate, br");
                 webClient.Headers.Add("Accept-Language", "en-US,en;q=0.9,uk;q=0.8,ru;q=0.7");
-                //webClient.Headers.Add("Cookie", "_ym_uid=1513893969963817275; fuid01=5a3bc78271a7498b.H-wkzmjytz--OeEmGDaOx9P7RK1UyUnVL90Ac98c1TFPHnkJ_rDVsthW6HEg7gKrpYIMt0sYlsRJpqXxpqdzLlk8-xhY9Sqn6d4cBv4mlMVQParrB6P4u1SQCQwVRFJ8; yandexuid=5842653851513866884; my_perpages=%5B%5D; PHPSESSID=v2s920v3buofvjd7vulubili47; yandex_gid=143; mobile=no; refresh_yandexuid=5842653851513866884; user_country=ua; tc=49; noflash=true; _ym_isad=2; _ym_visorc_22663942=b");
-                //webClient.Headers.Add("Upgrade-Insecure-Requests", "1");
+
                 webClient.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36");
-                //webClient.Headers.Add("X-Compress", "null");
-                //webClient.Headers.Add("Referer", url);
-                //}
-                //catch
-                //{
-                    //webClient.Headers.Add("Content-Lang", "ru");
-                    //webClient.Headers.Add("Accept", "application/json");
-                    //webClient.Headers.Add("UserAgent", "Android client (4.4 / api19), ru.kinopoisk/4.0.2 (52)");
-                    //webClient.Headers.Add("device", "android");
-                    //webClient.Headers.Add("Android-Api-Version", "19");
-                    //webClient.Headers.Add("clientDate", DateTime.Now.ToString("HH:mm dd.MM.yyyy"));
-                    //webClient.Headers.Add("Cookie", "PHPSESSID=r2t5uvjq435r4q7ib3vtdjq360");
-                    //webClient.Headers.Add("Pragma", "no-cache");
-                    //webClient.Headers.Add("Cache-Control", "no-cache");
-                //}
+
             }
             else if (tbUrlKF.Text.Contains(siteKinofrukt))
             {
