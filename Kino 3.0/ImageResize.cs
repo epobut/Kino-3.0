@@ -126,7 +126,7 @@ namespace Kino_3._0
                 imagePath = imagePath.Replace("?", "");
 
             FileStream fs = new FileStream(
-                $"C:\\Users\\e.nefedov\\Downloads\\redactor\\!kinofrukt\\{imagePath}.jpg",
+                $"C:\\Users\\!!!!ТЕКУЩИЙ ЮЗЕР!!!!\\Downloads\\redactor\\!kinofrukt\\{imagePath}.jpg",
                 System.IO.FileMode.Create, System.IO.FileAccess.ReadWrite);
             img.Tag = $"{imagePath} ({KinoFrukt.year})";
             img.Save(mass, System.Drawing.Imaging.ImageFormat.Jpeg);
