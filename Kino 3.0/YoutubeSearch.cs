@@ -53,7 +53,7 @@ namespace Kino_3._0
         {
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyCMrzFAewUA4gI_4AchQ8WM8unZ9WhDJeo",
+                ApiKey = "********************",   //заменить АПИ!
                 ApplicationName = this.GetType().ToString()
             });
 
